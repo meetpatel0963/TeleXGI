@@ -42,4 +42,5 @@ Ensure that permissions are set correctly for the kaggle.json file:
 !kaggle datasets download -d meetpatel0963/kvasir-v2
 !kaggle datasets download -d meet0963/kvasir-v2-folds
 !kaggle datasets download -d mp10201/kvasir-v2-resnet50-epochs-100
+!kaggle datasets download -d mp10201/kvasir-v2-mobilenet-v2-epochs-100
 ```
