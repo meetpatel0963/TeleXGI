@@ -1,0 +1,49 @@
+Class,Technique A,Technique B,Cosine Similarity
+dyed-lifted-polyps,Grad CAM,Saliency Map,0.7212011814117432
+dyed-lifted-polyps,Grad CAM,Integrated Gradients,0.7444950342178345
+dyed-lifted-polyps,Grad CAM,Lime,0.7590338901957552
+dyed-lifted-polyps,Saliency Map,Integrated Gradients,0.7837267518043518
+dyed-lifted-polyps,Saliency Map,Lime,0.6436141664231945
+dyed-lifted-polyps,Integrated Gradients,Lime,0.6247844795333868
+dyed-resection-margins,Grad CAM,Saliency Map,0.7324709892272949
+dyed-resection-margins,Grad CAM,Integrated Gradients,0.7091851234436035
+dyed-resection-margins,Grad CAM,Lime,0.8332347402747464
+dyed-resection-margins,Saliency Map,Integrated Gradients,0.8054526448249817
+dyed-resection-margins,Saliency Map,Lime,0.661858129263504
+dyed-resection-margins,Integrated Gradients,Lime,0.6423290037158513
+esophagitis,Grad CAM,Saliency Map,0.6471536755561829
+esophagitis,Grad CAM,Integrated Gradients,0.720405101776123
+esophagitis,Grad CAM,Lime,0.8556148111318489
+esophagitis,Saliency Map,Integrated Gradients,0.7969604730606079
+esophagitis,Saliency Map,Lime,0.628897143808033
+esophagitis,Integrated Gradients,Lime,0.6629094832259169
+normal-cecum,Grad CAM,Saliency Map,0.691233217716217
+normal-cecum,Grad CAM,Integrated Gradients,0.65272057056427
+normal-cecum,Grad CAM,Lime,0.8045135977194087
+normal-cecum,Saliency Map,Integrated Gradients,0.7890559434890747
+normal-cecum,Saliency Map,Lime,0.6090483237944715
+normal-cecum,Integrated Gradients,Lime,0.5990468225192747
+normal-pylorus,Grad CAM,Saliency Map,0.6950817108154297
+normal-pylorus,Grad CAM,Integrated Gradients,0.7195988893508911
+normal-pylorus,Grad CAM,Lime,0.7863047890332859
+normal-pylorus,Saliency Map,Integrated Gradients,0.7716816067695618
+normal-pylorus,Saliency Map,Lime,0.6623153894197562
+normal-pylorus,Integrated Gradients,Lime,0.6434330363615719
+normal-z-line,Grad CAM,Saliency Map,0.6918551921844482
+normal-z-line,Grad CAM,Integrated Gradients,0.7184935808181763
+normal-z-line,Grad CAM,Lime,0.7478593739928999
+normal-z-line,Saliency Map,Integrated Gradients,0.8038067817687988
+normal-z-line,Saliency Map,Lime,0.4687555821051268
+normal-z-line,Integrated Gradients,Lime,0.5052910482438212
+polyps,Grad CAM,Saliency Map,0.6170904636383057
+polyps,Grad CAM,Integrated Gradients,0.6916539072990417
+polyps,Grad CAM,Lime,0.7224643184819345
+polyps,Saliency Map,Integrated Gradients,0.7743226289749146
+polyps,Saliency Map,Lime,0.559759712056445
+polyps,Integrated Gradients,Lime,0.6233911997320475
+ulcerative-colitis,Grad CAM,Saliency Map,0.6530786752700806
+ulcerative-colitis,Grad CAM,Integrated Gradients,0.6924592852592468
+ulcerative-colitis,Grad CAM,Lime,0.9099019740905039
+ulcerative-colitis,Saliency Map,Integrated Gradients,0.7796408534049988
+ulcerative-colitis,Saliency Map,Lime,0.633589748702666
+ulcerative-colitis,Integrated Gradients,Lime,0.6733481245069913
