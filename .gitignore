@@ -1,0 +1,9 @@
+# Ignore virtual environment directory
+venv/
+
+# Add other files or directories to ignore (e.g., IDE files, temporary files)
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+*.pyo
