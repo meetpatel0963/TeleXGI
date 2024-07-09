@@ -14,7 +14,7 @@ class MobileNetClassifier(nn.Module):
         
         # Remove the final classification layer
         self.mobilenet = nn.Sequential(*list(self.mobilenet.children())[:-1])
-        
+
         self.reduce = nn.AdaptiveAvgPool2d(1)
         
         # Define an MLP for classification
@@ -37,3 +37,7 @@ class MobileNetClassifier(nn.Module):
         # Forward pass through MLP
         output = self.fc(mobilenet_features)
         return output
+
+    def get_target_layers(self): 
+        # Return target layers for GradCAM
+        return self.mobilenet[0][18][-1]

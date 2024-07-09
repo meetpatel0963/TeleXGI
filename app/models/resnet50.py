@@ -35,3 +35,7 @@ class ResNet50Classifier(nn.Module):
         # Forward pass through MLP
         output = self.fc(resnet_features)
         return output
+
+    def get_target_layers(self): 
+        # Return target layers for GradCAM
+        return self.resnet50[7][-1]

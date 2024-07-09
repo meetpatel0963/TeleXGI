@@ -10,6 +10,7 @@ from PIL import Image
 
 from config import Config
 from models.resnet50 import ResNet50Classifier
+from models.mobilenetv2 import MobileNetClassifier
 from utils.utils import make_prediction_image, get_pil_image_from_frame, explain_prediction_image, \
                         visualize_explanation_heatmaps, format_filename, convert_to_mp4, process_video
 
@@ -17,8 +18,15 @@ from utils.utils import make_prediction_image, get_pil_image_from_frame, explain
 use_cuda = torch.cuda.is_available()
 device = torch.device("cuda" if use_cuda else "cpu")
 
-model = ResNet50Classifier().to(device)
-checkpoint = torch.load(os.path.abspath(os.path.join(os.path.dirname(__file__), Config.RESNET50_MODEL_PATH)), map_location=device)
+if Config.MODEL_NAME == Config.RESNET50: 
+    model = ResNet50Classifier().to(device)
+elif Config.MODEL_NAME == Config.MOBILENETV2:
+    model = MobileNetClassifier().to(device)
+else:
+    st.error('Invalid Model Name')
+    st.stop()
+
+checkpoint = torch.load(os.path.abspath(os.path.join(os.path.dirname(__file__), Config.MODEL_WEIGHTS[Config.MODEL_NAME])), map_location=device)
 model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
@@ -94,8 +102,8 @@ def main():
                 predicted_class, predicted_class_name, confidence = make_prediction_image(example_image, model, test_transforms, device)
 
                 # Display predicted class and confidence
-                st.sidebar.write(f"Predicted class: {predicted_class_name}")
-                st.sidebar.write(f"Confidence: {confidence}")
+                st.write(f"Predicted class: {predicted_class_name}")
+                st.write(f"Confidence: {confidence}")
 
                 if st.button("Show Visualizations"):
                     # Explain prediction on uploaded image using XAI techniques

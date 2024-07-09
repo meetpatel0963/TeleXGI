@@ -64,7 +64,7 @@ def explain_prediction_image(image, model, test_transforms, predicted_class, dev
 
     # Initialize XAI techniques
     xai_techniques = XAITechniques(
-        GradientCAM(GradCAM(model=model, target_layers=[model.resnet50[7][-1]])),
+        GradientCAM(GradCAM(model=model, target_layers=[model.get_target_layers()])),
         SaliencyMap(saliency=Saliency(model)), 
         IntegratedGradients(model),
         Lime(explainer=lime_image.LimeImageExplainer(), model=model, device=device)

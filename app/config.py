@@ -13,6 +13,17 @@ class Config:
     RESNET50_MODEL_PATH = '../models/resnet50/model_fold_0_epoch_30.pth'
     MOBILENETV2_MODEL_PATH = '../models/mobilenetv2/model_fold_0_epoch_30.pth'
 
+    # Models Available
+    RESNET50 = 'resnet50'
+    MOBILENETV2 = 'mobilenetv2'
+    MODEL_WEIGHTS = {
+        RESNET50: RESNET50_MODEL_PATH, 
+        MOBILENETV2: MOBILENETV2_MODEL_PATH, 
+    }
+        
+    # Model Used
+    MODEL_NAME = RESNET50
+
     # Dataset
     CLASS_NAMES = ['dyed-lifted-polyps', 'dyed-resection-margins', 'esophagitis', \
                    'normal-cecum', 'normal-pylorus', 'normal-z-line', 'polyps', 'ulcerative-colitis']
